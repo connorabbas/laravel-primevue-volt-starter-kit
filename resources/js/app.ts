@@ -1,5 +1,4 @@
 import "../css/app.css";
-import "../css/tailwind.css";
 
 import { createInertiaApp, Head, Link } from "@inertiajs/vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";

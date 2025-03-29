@@ -1,3 +1,5 @@
+@import "tailwind.css";
+
 html {
     /* font size will determine the component/utility scaling */
     font-size: 14px;

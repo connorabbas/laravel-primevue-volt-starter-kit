@@ -23,10 +23,6 @@ const page = usePage();
 
     <div class="min-h-full">
         <div class="h-screen flex items-center justify-center">
-            <Button
-                label="Test Standalone Button"
-                class="mr-4"
-            />
             <Card pt:body:class="p-4 py-6 sm:p-12">
                 <template #content>
                     <div class="text-center md:text-left">
