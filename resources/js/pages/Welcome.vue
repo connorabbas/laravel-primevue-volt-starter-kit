@@ -1,8 +1,8 @@
 <script setup>
 import { usePage } from '@inertiajs/vue3';
 import { LayoutGrid, LogIn, Settings, UserPlus } from 'lucide-vue-next';
-import Card from '@/components/volt/Card.vue';
-import Button from '@/components/volt/Button.vue';
+import Card from '@/components/primevue/volt/Card.vue';
+import Button from '@/components/primevue/volt/Button.vue';
 
 defineProps({
     laravelVersion: {
