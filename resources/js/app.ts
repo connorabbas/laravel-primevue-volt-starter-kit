@@ -6,6 +6,11 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import type { DefineComponent } from "vue";
 import { createApp, h } from "vue";
 import { ZiggyVue } from "ziggy-js";
+import PrimeVue from "primevue/config";
+import { useColorMode } from "@vueuse/core";
+
+// Sets Light/Dark mode
+const colorMode = useColorMode({ emitAuto: true });
 
 // Extend ImportMeta interface for Vite...
 declare module "vite/client" {
@@ -31,8 +36,12 @@ createInertiaApp({
         ),
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
+            .provide("colorMode", colorMode)
             .use(plugin)
             .use(ZiggyVue)
+            .use(PrimeVue, {
+                unstyled: true,
+            })
             .component("InertiaHead", Head)
             .component("InertiaLink", Link)
             .mount(el);

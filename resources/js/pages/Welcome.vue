@@ -1,13 +1,10 @@
 <script setup>
 import { usePage } from '@inertiajs/vue3';
+import { LayoutGrid, LogIn, Settings, UserPlus } from 'lucide-vue-next';
+import Card from '@/components/volt/Card.vue';
+import Button from '@/components/volt/Button.vue';
 
 defineProps({
-    canLogin: {
-        type: Boolean,
-    },
-    canRegister: {
-        type: Boolean,
-    },
     laravelVersion: {
         type: String,
         required: true,
@@ -26,8 +23,11 @@ const page = usePage();
 
     <div class="min-h-full">
         <div class="h-screen flex items-center justify-center">
-            test
-            <!-- <Card pt:body:class="p-4 py-6 sm:p-12">
+            <Button
+                label="Test Standalone Button"
+                class="mr-4"
+            />
+            <Card pt:body:class="p-4 py-6 sm:p-12">
                 <template #content>
                     <div class="text-center md:text-left">
                         <span class="block text-6xl font-bold text-red-500 dark:text-red-400 mb-1">Laravel,</span>
@@ -56,34 +56,46 @@ const page = usePage();
                             <InertiaLink :href="route('dashboard')">
                                 <Button
                                     label="Dashboard"
-                                    icon="pi pi-home"
                                     class="mr-4"
-                                />
+                                >
+                                    <template #icon>
+                                        <LayoutGrid />
+                                    </template>
+                                </Button>
                             </InertiaLink>
                             <InertiaLink :href="route('profile.edit')">
                                 <Button
                                     outlined
-                                    label="Profile"
-                                    icon="pi pi-user"
+                                    label="Profile Settings"
                                     class="mr-4"
-                                />
+                                >
+                                    <template #icon>
+                                        <Settings />
+                                    </template>
+                                </Button>
                             </InertiaLink>
                         </template>
                         <template v-else>
                             <InertiaLink :href="route('login')">
                                 <Button
                                     label="Login"
-                                    icon="pi pi-sign-in"
                                     class="mr-4"
-                                />
+                                >
+                                    <template #icon>
+                                        <LogIn />
+                                    </template>
+                                </Button>
                             </InertiaLink>
                             <InertiaLink :href="route('register')">
                                 <Button
                                     outlined
                                     label="Register"
-                                    icon="pi pi-user-plus"
                                     class="mr-4"
-                                />
+                                >
+                                    <template #icon>
+                                        <UserPlus />
+                                    </template>
+                                </Button>
                             </InertiaLink>
                         </template>
                         <div class="mt-6">
@@ -95,7 +107,7 @@ const page = usePage();
                         </div>
                     </div>
                 </template>
-            </Card> -->
+            </Card>
         </div>
     </div>
 </template>
