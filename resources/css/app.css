@@ -1,4 +1,4 @@
-@import "tailwind.css";
+@import "./tailwind.css";
 
 html {
     /* font size will determine the component/utility scaling */
@@ -21,17 +21,17 @@ body {
 
 /* Primary and Surface Palettes */
 :root {
-    --p-primary-50: var(--color-blue-50);
-    --p-primary-100: var(--color-blue-100);
-    --p-primary-200: var(--color-blue-200);
-    --p-primary-300: var(--color-blue-300);
-    --p-primary-400: var(--color-blue-400);
-    --p-primary-500: var(--color-blue-500);
-    --p-primary-600: var(--color-blue-600);
-    --p-primary-700: var(--color-blue-700);
-    --p-primary-800: var(--color-blue-800);
-    --p-primary-900: var(--color-blue-900);
-    --p-primary-950: var(--color-blue-950);
+    --p-primary-50: var(--color-indigo-50);
+    --p-primary-100: var(--color-indigo-100);
+    --p-primary-200: var(--color-indigo-200);
+    --p-primary-300: var(--color-indigo-300);
+    --p-primary-400: var(--color-indigo-400);
+    --p-primary-500: var(--color-indigo-500);
+    --p-primary-600: var(--color-indigo-600);
+    --p-primary-700: var(--color-indigo-700);
+    --p-primary-800: var(--color-indigo-800);
+    --p-primary-900: var(--color-indigo-900);
+    --p-primary-950: var(--color-indigo-950);
     --p-surface-0: #ffffff;
     --p-surface-50: var(--color-zinc-50);
     --p-surface-100: var(--color-zinc-100);
